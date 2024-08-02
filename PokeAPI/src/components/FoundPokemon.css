@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Lato:wght@300&family=M+PLUS+Code+Latin:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+  background-color: #000000;
+  font-family: "Roboto";
+}
+
+#root {
+  max-width: 1280px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+   opacity: 50;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes scaleing{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.05);
+  }
+}
+
+.encounter-details {
+  
+    width: 68vh;
+    background-image: linear-gradient(
+      45deg,
+      hsl(0, 1%, 27%) 0%,
+      hsl(203deg 11% 29%) 10%,
+      hsl(203deg 14% 36%) 20%,
+      hsl(202deg 16% 42%) 30%,
+      hsl(202deg 17% 47%) 40%,
+      hsl(202deg 19% 52%) 50%,
+      hsl(202deg 20% 59%) 60%,
+      hsl(201deg 21% 64%) 70%,
+      hsl(200deg 23% 70%) 80%,
+      hsl(199deg 26% 74%) 90%,
+      hsl(198deg 31% 79%) 100%
+    );
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1), 
+    -5px -5px 5px rgba(255, 255, 255, 0.5); 
+  
+    animation: fade 2s ease-out forwards;
+    margin: 0 auto; 
+  }
+  
+  
+  .encounter-details h3 {
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 25px;
+    text-align: center;
+  
+  }
+  
+  .encounter-details img {
+    width: 34vh;
+    height: 34vh;
+    border-radius: 8px; 
+    margin-top: 10px; 
+    image-rendering: pixelated;
+    
+  }
+  
+  .encounter-details p {
+    margin-top: 10px;
+    font-weight: bold;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1), 
+    -5px -5px 5px rgba(255, 255, 255, 0.5); 
+    background-image: linear-gradient(
+    195deg,
+    hsl(0deg 0% 19%) 0%,
+    hsl(204deg 1% 22%) 10%,
+    hsl(204deg 2% 25%) 20%,
+    hsl(204deg 2% 28%) 30%,
+    hsl(204deg 3% 30%) 40%,
+    hsl(204deg 3% 33%) 50%,
+    hsl(199deg 6% 46%) 60%,
+    hsl(199deg 9% 56%) 70%,
+    hsl(198deg 14% 65%) 80%,
+    hsl(198deg 21% 72%) 90%,
+    hsl(198deg 31% 79%) 100%
+  );
+    letter-spacing: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 20vh;
+  }
+  
+  .encounter-details button {
+    margin-top: 10px; 
+    padding: 8px 16px; 
+    background-color: #000000;  
+    color: #fff; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer;
+  }
+  
+  .encounter-details button:hover {
+    background-color: hsl(0, 4%, 86%);
+    color:#000000
+  }
+  

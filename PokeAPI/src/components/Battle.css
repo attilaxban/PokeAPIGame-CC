@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Lato:wght@300&family=M+PLUS+Code+Latin:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background-color: black;
+  font-family: "Roboto"
+}
+
+#root {
+  max-width: 1280px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 50;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-10px, -10px, -10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(10px, -10px, -10px);
+  }
+}
+
+@keyframes lightning {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.7;
+    transform: translateY(-5px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+
+  75% {
+    opacity: 0.7;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* -----------Animations-------- */
+
+
+#attack-flash.active {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  animation: flash 0.2s ease-out;
+}
+
+
+#choosen-pokemon.active,
+#encounter.active {
+  animation: lightning 1s ease-in-out, fade 5s ease-out forwards, shake 0.5s ease-in-out infinite;
+}
+
+#user.active {
+  position: relative;
+  animation: shake 1s ease-in-out;
+}
+
+#enemy.active {
+  animation: shake 1s ease-in-out;
+}
+
+#fight-stats.active {
+  position: relative;
+  animation: fade 5s ease-out forwards, lightning 4s ease-in-out;
+}
+
+
+/* --------Summary-------- */
+
+#pokemon-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+#pokemon-summary button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  letter-spacing: 5px;
+  width: auto;
+  height: auto;
+}
+
+#pokemon-summary button:hover {
+  color: #000000;
+  background-color: #fff;
+}
+
+
+/* --------------Choosen Pokemon-------- */
+
+
+
+#choosen-pokemon {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px, auto;
+  background-image: linear-gradient(45deg,
+      hsl(0deg 0% 22%) 0%,
+      hsl(358deg 5% 30%) 10%,
+      hsl(358deg 9% 37%) 20%,
+      hsl(358deg 11% 45%) 30%,
+      hsl(358deg 15% 54%) 40%,
+      hsl(357deg 23% 62%) 50%,
+      hsl(359deg 34% 60%) 60%,
+      hsl(0deg 43% 57%) 70%,
+      hsl(2deg 49% 52%) 80%,
+      hsl(2deg 59% 47%) 90%,
+      hsl(0deg 80% 41%) 100%);
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1),
+    -5px -5px 5px rgba(255, 255, 255, 0.5);
+  animation: fade 2s ease-out forwards;
+  margin: 0 auto;
+}
+
+
+#choosen-pokemon button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#choosen-pokemon button:hover {
+  background-color: hsl(0, 4%, 86%);
+  color: #000000
+}
+
+#choosen-pokemon h3 {
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 25px;
+  text-align: center;
+  font-variant: small-caps;
+
+}
+
+
+#choosen-pokemon img {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  margin-top: 10px;
+  image-rendering: pixelated;
+
+}
+
+#choosen-pokemon p {
+  margin-top: 10px;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1),
+    -5px -5px 5px rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(195deg,
+      hsl(0deg 0% 22%) 0%,
+      hsl(358deg 5% 30%) 10%,
+      hsl(358deg 9% 37%) 20%,
+      hsl(358deg 11% 45%) 30%,
+      hsl(358deg 15% 54%) 40%,
+      hsl(357deg 23% 62%) 50%,
+      hsl(359deg 34% 60%) 60%,
+      hsl(0deg 43% 57%) 70%,
+      hsl(2deg 49% 52%) 80%,
+      hsl(2deg 59% 47%) 90%,
+      hsl(0deg 80% 41%) 100%);
+  letter-spacing: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 150px;
+}
+
+
+
+/* Encounter */
+
+#encounter {
+  width: 400px;
+  height: 400px, auto;
+  background-image: linear-gradient(45deg,
+      hsl(0, 1%, 27%) 0%,
+      hsl(203deg 11% 29%) 10%,
+      hsl(203deg 14% 36%) 20%,
+      hsl(202deg 16% 42%) 30%,
+      hsl(202deg 17% 47%) 40%,
+      hsl(202deg 19% 52%) 50%,
+      hsl(202deg 20% 59%) 60%,
+      hsl(201deg 21% 64%) 70%,
+      hsl(200deg 23% 70%) 80%,
+      hsl(199deg 26% 74%) 90%,
+      hsl(198deg 31% 79%) 100%);
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1),
+    -5px -5px 5px rgba(255, 255, 255, 0.5);
+  animation: fade 2s ease-out forwards;
+  margin: 0 auto;
+}
+
+#encounter h3 {
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 25px;
+  text-align: center;
+
+}
+
+#encounter img {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  margin-top: 10px;
+  image-rendering: pixelated;
+
+}
+
+#encounter p {
+  margin-top: 10px;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1),
+    -5px -5px 5px rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(195deg,
+      hsl(0deg 0% 19%) 0%,
+      hsl(204deg 1% 22%) 10%,
+      hsl(204deg 2% 25%) 20%,
+      hsl(204deg 2% 28%) 30%,
+      hsl(204deg 3% 30%) 40%,
+      hsl(204deg 3% 33%) 50%,
+      hsl(199deg 6% 46%) 60%,
+      hsl(199deg 9% 56%) 70%,
+      hsl(198deg 14% 65%) 80%,
+      hsl(198deg 21% 72%) 90%,
+      hsl(198deg 31% 79%) 100%);
+  letter-spacing: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 150px;
+}
+
+
+#encounter button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#encounter button:hover {
+  background-color: hsl(0, 4%, 86%);
+  color: #000000
+}
+
+/* -----------Fight Bar-------------- */
+#fight-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  width: 320px;
+  height: 110px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1),
+    -5px -5px 5px rgba(255, 255, 255, 0.5);
+  font-variant: small-caps;
+  background-color: #373636;
+  animation: fade 2s ease-out forwards;
+}
+
+
+
+
+#lost-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  border-color: #fff;
+  cursor: pointer;
+}
+
+#lost-button:hover {
+  background-color: hsl(0, 4%, 86%);
+  color: #000000
+}
+
+#press-space {
+  font-size: 24px;
+  font-weight: bold;
+  font-style: oblique;
+}
